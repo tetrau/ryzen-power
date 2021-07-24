@@ -145,14 +145,14 @@ class RyzenPower:
         for socket in sockets:
             socket_total_cores_power = 0
             socket_package_power = 0
-            socket_power_entry = ["SOCKET {}:".format(socket)]
+            socket_power_entry = ["SOCKET {: 2}:".format(socket)]
             table.append(socket_power_entry)
             for core in self._cores:
                 if self._package_topology[core] == socket:
                     socket_total_cores_power += core_power[core]
                     socket_package_power = package_power[core]
                     table.append([
-                        "   CPU {}:".format(core // 2 if self._is_smt else core),
+                        "  CORE {: 2}:".format(core // 2 if self._is_smt else core),
                         core_power[core],
                         ""
                     ])

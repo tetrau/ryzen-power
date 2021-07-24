@@ -11,14 +11,14 @@ or any dependencies.
 ```
 $ sudo python3 ryzen-power.py
                 Cores Power     Package Power
-SOCKET 0:       5.90W           13.07W
-   CPU 0:       2.96W
-   CPU 1:       2.95W
+SOCKET  0:      5.90W           13.07W
+  CORE  0:      2.96W
+  CORE  1:      2.95W
 ```
 
 ## Installation
 
-ryzen-power require [msr](https://manpages.debian.org/buster/manpages/msr.4.en.html)
+ryzen-power requires [msr](https://manpages.debian.org/buster/manpages/msr.4.en.html)
 enabled. You might need to load the msr driver first.
 
 ```bash
